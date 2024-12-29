@@ -24,36 +24,7 @@ int sumNode(Node* root);
 int countLeaf(Node* root);
 int countLess(Node* root, int x);
 int countGreater(Node* root, int x);
-int main() {
-	Node* tree = NULL;
-	tree = insert(tree, 8);
-	tree = insert(tree, 6);
-	tree = insert(tree, 5);
-	tree = insert(tree, 7);
-	tree = insert(tree, 10);
-	tree = insert(tree, 9);
 
-	cout << "Pre-Order: ";
-	NLR(tree);
-	cout << endl << "In-Order: ";
-	LNR(tree);
-	cout << endl << "Post-Order: ";
-	LRN(tree);
-
-	cout << endl << "After Delete: ";
-	tree= _delete(tree, 8);
-	cout << endl << "Level-Order: ";
-	LevelOrder(tree);
-
-	cout <<endl << "Height (start from 0 with root) : " << height(tree);
-	cout << endl << "Count Node: " << countNode(tree);
-	cout << endl << "Sum Node: " << sumNode(tree);
-	cout << endl << "Count Leaf: " << countLeaf(tree);
-	cout << endl << "Count Less than x = 7: " << countLess(tree, 7);
-	cout << endl << "Count Greater x = 7: " << countGreater(tree, 7);
-	return 0;
-
-}
 
 
 Node* newNode(int data) {
